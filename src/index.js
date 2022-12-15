@@ -1,12 +1,30 @@
 import { renderActiveKoala } from './active.js'
-import { renderKoalaCard } from './card.js'
-import { renderKoalaCardContent } from './cardContent.js'
-import { renderKoalaCardImage } from './cardImage.js'
 import { koalas } from './koalas.js'
 import { renderKoalaList } from './list.js'
-import { render } from './render.js'
-import { selectKoala } from './selectKoala.js'
-let activeKoala = null
+import { activeKoala } from './selectKoala.js'
+
+
+// Called once when the page loads, and again every time a koala is selected
+export let render = () => {
+    let oldPage=  document.querySelector('.koala-container')
+    let newPage;
+    if(activeKoala){
+        newPage = renderActiveKoala(activeKoala)
+    } else {
+        newPage = renderKoalaList(koalas)
+    }
+    newPage.classList.add('koala-container')
+    oldPage.replaceWith(newPage)
+}
+
+
+
+// Render the page after all functions are defined
+render()
+
+
+
+
 
 
 
@@ -133,6 +151,3 @@ let renderActiveKoala = koala => {
 
     return activeKoalaContainer
 }*/
-
-// Render the page after all functions are defined
-render()

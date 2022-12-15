@@ -1,3 +1,6 @@
+
+import { renderKoalaCard } from './card.js'
+
 // Renders a list of koalas
 export let renderKoalaList = koalas => {
     let koalaContainer = document.createElement('div')

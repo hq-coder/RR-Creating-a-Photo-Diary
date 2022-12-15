@@ -1,3 +1,7 @@
+import { renderKoalaCardContent } from './cardContent.js'
+import { renderKoalaCardImage } from './cardImage.js'
+import { selectKoala } from './selectKoala.js'
+
 // Renders a card to display a single koala
 export let renderKoalaCard = koala => {
     let koalaCard = document.createElement('div')
