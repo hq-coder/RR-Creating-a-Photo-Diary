@@ -1,7 +1,16 @@
-
+import { renderActiveKoala } from './active.js'
+import { renderKoalaCard } from './card.js'
+import { renderKoalaCardContent } from './cardContent.js'
+import { renderKoalaCardImage } from './cardImage.js'
+import { koalas } from './koalas.js'
+import { renderKoalaList } from './list.js'
+import { render } from './render.js'
+import { selectKoala } from './selectKoala.js'
 let activeKoala = null
 
-// Changes the active koala, then re-renders the page to display that koala
+
+
+/*// Changes the active koala, then re-renders the page to display that koala
 let selectKoala = koala => {
     activeKoala = koala
     render()
@@ -123,7 +132,7 @@ let renderActiveKoala = koala => {
     )
 
     return activeKoalaContainer
-}
+}*/
 
 // Render the page after all functions are defined
 render()
